@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.pandasoft.studenthelper">
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher2"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher2_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.StudentHelper"
+        tools:ignore="AllowBackup">
+        <activity
+            android:name=".Activities.Quiz.ActivityAddEditQuiz"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.Subject.ActivitySubject"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.Login.ActivityVerifyOtp"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".Activities.Login.ActivityLogin"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Activities.MainActivity"
+            android:screenOrientation="portrait">
+
+
+
+        </activity>
+
+        <activity
+            android:name=".Activities.Settings.ActivitySettings"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".Activities.Tips.ActivityTips"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.Notification.ActivityNotification"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".Activities.Institutes.ActivityInstitutes"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.Universities.ActivityUnversites"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.Websites.ActivityWebsites"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".Activities.Quiz.DoExamActivity"
+            android:screenOrientation="portrait" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            tools:replace="android:authorities">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_path"
+                tools:replace="android:resource" />
+        </provider>
+
+        <service
+            android:name=".Services.GetNotificationsService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_notifications" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/accent" />
+    </application>
+
+</manifest>

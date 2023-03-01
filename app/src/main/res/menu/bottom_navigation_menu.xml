@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/bottom_menu_item_home"
+        android:icon="@drawable/ic_home"
+        android:title="الرئيسية" />
+    <item
+        android:id="@+id/bottom_menu_item_options"
+        android:icon="@drawable/ic_settings"
+        android:title="الاعدادات" />
+
+    <item
+        android:id="@+id/bottom_menu_item_notifications"
+        android:icon="@drawable/ic_notifications"
+        android:title="الاشعارات" />
+
+    <item
+        android:enabled="false"
+        android:id="@+id/bottom_menu_item_chat"
+        android:icon="@drawable/ic_chat"
+        android:title="المحادثات" />
+</menu>

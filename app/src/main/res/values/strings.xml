@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">StudentHelper</string>
+    <!-- TODO: Remove or change this placeholder text -->
+
+    <!-- Strings used for fragments for navigation -->
+
+    <string name="new_question">اضافة سؤال</string>
+    <string name="save">حفظ</string>
+    <string name="first_selection">الاختيار الاول</string>
+    <string name="true_selection">الاجابة الصحيحة</string>
+    <string name="third_selection">الاختيار الثالث</string>
+    <string name="second_selection">الاختيار الثاني</string>
+    <string name="question">السؤال</string>
+    <string name="close_button">Close Button</string>
+    <string name="add_video">اضافة فيديو</string>
+    <string name="correct_answers">الاجابات الصحيحة:</string>
+    <string name="_from_">من</string>
+    <string name="question_number">رقم السؤال:</string>
+    <string name="_1">1</string>
+    <string name="_40">40</string>
+    <string name="choose_correct_answer">اختر الاجابة الصحيحة:</string>
+    <string name="cancel">الغاء</string>
+    <string name="add_university_description">Add Universit Description</string>
+</resources>
